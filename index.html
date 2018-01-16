@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Knowledge system</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto+Slab|Open+Sans+Condensed:300|Lato|Source+Sans+Pro" rel="stylesheet">
+</head>
+<body>
+
+	<header class="top">
+		<div class="mobile-menu-button"><i class="fa fa-bars" aria-hidden="true"></i></div>
+		<nav class="top-menu">
+			<ul class = "top-menu__desktop">
+				<li class="top-menu__item"><a href="/final/" class="top-menu__link top-menu__link--active">Home</a></li>
+				<li class="top-menu__item"><a href="/final/blog/" class="top-menu__link">Blog</a></li>
+				<li class="top-menu__item"><a href="/final/progr/" class="top-menu__link">Find a Programmer</a></li>
+				<li class="top-menu__item"><a href="/final/profile/" class="top-menu__link">Place Resume</a>
+					<ul class="top-menu__dropdown-menu">
+						<li class="top-menu__dropdown-menu__item"><a href="/final/profile/dashboard/" class="top-menu__link">My Account <i class="fa fa-user-o" aria-hidden="true"></i></a></li>
+					</ul>
+				</li>
+				<li class="top-menu__item"><a href="/final/contacts/" class="top-menu__link">Contacts</a></li>
+			</ul>
+			<div class="top-menu__wrapper">
+				<ul class = "top-menu__mobile">
+					<li class="top-menu__item"><a href="/final/" class="top-menu__link">Home</a></li>
+					<li class="top-menu__item"><a href="/final/blog/" class="top-menu__link">Blog</a></li>
+					<li class="top-menu__item"><a href="/final/progr/" class="top-menu__link">Find a Programmer</a></li>
+					<li class="top-menu__item top-menu__item--has-children"><a href="/final/profile/" class="top-menu__link">Place Resume</a>
+						<ul class="top-menu__dropdown-menu">
+							<li class="top-menu__dropdown-menu__item"><a href="/final/profile/dashboard/" class="top-menu__link">My Account <i class="fa fa-user-o" aria-hidden="true"></i></a></li>
+						</ul>
+					</li>
+					<li class="top-menu__item"><a href="/final/contacts/" class="top-menu__link">Contacts</a></li>
+				</ul>
+			</div>
+			
+		</nav>
+	</header>
+
+	<main class="main">
+
+		<div class = "slider">
+		    <ol class = "slider__list">
+		      <li class="slider__item" style="background-image:url(images/slide3.jpg);"></li>
+		      <li class="slider__item" style="background-image:url(images/slide2.jpg);"></li>
+		      <li class="slider__item" style="background-image:url(images/slide1.jpg);"></li>
+		    </ol>
+		    <span class="slider__nav slider__nav--left fa fa-angle-left fa-3x"></span>
+		    <span class="slider__nav slider__nav--right fa fa-angle-right fa-3x"></span>
+		    
+			<div class="slider__info">
+				<span class = "slider__title">Find Your Job</span>
+				<!--<form action="" class="slider__search">
+					<div class = "slider__search-text">
+						<input type="text" value = "" placeholder="Search By Jobs" >
+					</div>
+					<div class="slider__search-text">
+						<input type="text" value = "" placeholder="Search By Location">
+					</div>
+					<input class="slider__search-button" type="submit" value = "Search">
+				</form>-->
+			</div>
+		</div>
+
+		<section class="section info-section">
+			<div class="container">
+				<div class="section-head">
+					<h2 class = "section-head__title section-head__title--light">What we offer?</h2>
+				</div>
+			</div>
+			<div class="container">
+				<div class="info-section__body">
+					<div class="info-section__item">
+						<img src="images/icon1.png" alt="" class="info-section__item__icon">
+						<div class="info-section__item-title">Read Useful articles</div>
+					</div>
+					<div class="info-section__item">
+						<img src="images/icon2.png" alt="" class="info-section__item__icon">
+						<div class="info-section__item-title">Place your Resume</div>
+					</div>
+					<div class="info-section__item">
+						<img src="images/icon3.png" alt="" class="info-section__item__icon">
+						<div class="info-section__item-title">Find Your Future Work</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section stat-section">
+			<div class="section-head">
+				<h2 class = "section-head__title section-head__title--dark">Some Statistics</h2>
+			</div>
+			<div class="container stat-section__container">
+                <div class="stat-section__item">
+                    <img src="images/stat1.png" alt="" class = "stat-section__image">
+                    <p class="stat-section__text stat-section__text--counter" data-from="25" data-to="12458" data-speed="5000" data-refresh-interval="20"></p>
+                    <p class="stat-section__text stat-section__text--description">People placed resume</p>
+                </div>
+                <div class="stat-section__item">
+                    <img src="images/stat2.png" alt="" class = "stat-section__image">
+                    <p class="stat-section__text stat-section__text--counter" data-from="25" data-to="6796" data-speed="5000" data-refresh-interval="20"></p>
+                    <p class="stat-section__text stat-section__text--description">Found their new work</p>
+                </div>
+                <div class="stat-section__item">
+                    <img src="images/stat3.png" alt="" class = "stat-section__image">
+                    <p class="stat-section__text stat-section__text--counter" data-from="25" data-to="5000" data-speed="5000" data-refresh-interval="20"></p>
+                    <p class="stat-section__text stat-section__text--description">Positive Feedbacks</p>
+                </div>
+            </div>
+		</section>
+
+		<section class="section home-blog">
+			<div class="section-head">
+				<h2 class = "section-head__title section-head__title--light">Our Blog</h2>
+				<span class = "section-head__subtitle">There u can read our latest news</span>
+			</div>
+			<div class="container home-blog__container">
+				<div class="home-blog__feature">
+					<div class="home-blog__feature__head">
+	                    <p class="home-blog__feature__meta">Google News <span>10 December, 2017</span></p>
+	                    <img src="images/brand.jpg" alt="" class = "home-blog__feature__image">
+	                </div>
+	                <div class="home-blog__feature__content">
+	                    <h3 class = "home-blog__feature__title">THE IMPORTANCE OF YOUR PERSONAL BRAND</h3>
+	                    <p class = "home-blog__feature__description">If prompted, could you describe what makes you professionally unique? Are you conscious of what comp</p>
+	                    <a href="#" class="home-blog__link">READ MORE</a>
+	                </div>
+				</div>
+                <div class="home-blog__articles">
+                    <div class="home-blog__item home-blog__item--first">
+                        <div class="home-blog__item__meta">
+                            <div class="home-blog__item__author">Google News</div>
+                            <div class="home-blog__item__date">4 Jan 2017</div>
+                        </div>
+                        <div class="home-blog__item__text">
+                            <h3 class="home-blog__item__title">EVERYTHING YOU ALWAYS WANTED TO KNOW ABOUT SALES AND BUSINESS DEVELOPMENT</h3>
+                            <p class="home-blog__item__description">Thinking about a job in sales? There are plenty to choose from posted on Monster.ca. But before you start applying, read about what Business</p>
+                            <a href="#" class="home-blog__link">READ MORE</a>
+                        </div>
+                    </div>
+					<div class="home-blog__item home-blog__item--second">
+                        <div class="home-blog__item__meta">
+                            <div class="home-blog__item__author">Google News</div>
+                            <div class="home-blog__item__date">5 Jan 2017</div>
+                        </div>
+                    	<div class="home-blog__item__text">
+                        	<h3 class="home-blog__item__title">BEST SPRING JOBS</h3>
+                            <p class="home-blog__item__description">Have a spring fling. The warmer weather is time for career growth and renewal so how about growing your skill set and getting a seasonal job. Many of us are under the impressio</p>
+                            <a href="#" class="home-blog__link">READ MORE</a>
+                        </div>
+                    </div>
+                    <div class="home-blog__item home-blog__item--third">
+                        <div class="home-blog__item__meta">
+                            <div class="home-blog__item__author">Google News</div>
+                                <div class="home-blog__item__date">6 Jan 2017</div>
+                            </div>
+                        <div class="home-blog__item__text">
+                            <h3 class="home-blog__item__title">QUICK TAKE: 3 ANSWERS TO 3 QUESTIONS ABOUT CAREER CATFISHING</h3>
+                            <p class="home-blog__item__description">Here at The Muse, we get a lot of questions from our users about their careers. And that’s totally fair because our whole thing is sharing advice with you to help you achieve your dreams</p>
+                            <a href="#" class="home-blog__link">READ MORE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</section>
+
+		<section class="section contact-section contact-section contact-map">
+			<div class="container">
+				<div class="section-head">
+					<h2 class = "section-head__title section-head__title--dark">Contact us</h2>
+					<span class = "section-head__subtitle">Please, fill the form below</span>
+				</div>
+				<form action="" class="contact-section__form">
+					<div class="contact-section__author">
+						<input type="text" placeholder="Your Name" required name = "fbName" class="contact-section__input">
+						<input type="email" placeholder="Your Email" required name = "fbMail" class="contact-section__input">
+						<input type="text" placeholder="Subject" name = "fbSubject" class="contact-section__input">
+					</div>
+					<div class="contact-section__text">
+						<textarea name="fbText" id="fbText" class="contact-section__input contact-section__input--area" cols="30" rows="10" placeholder="Your Message" required></textarea>
+					</div>
+					<div class="line-break"></div>
+					<input type="submit" value = "Send" class = "contact-section__submit">
+				</form>
+			</div>
+		</section>
+	</main>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src = "js/countTo.js"></script>
+<script src = "js/scripts.js"></script>
+<script>
+	$.slider = new Object();
+	$.slider.current = 0;
+	$.slider.total = 0;
+	$(document).ready(function() {
+	  slider();     
+	  $('.stat-section__text--counter').countTo();
+	});
+</script>
+</body>
+</html>

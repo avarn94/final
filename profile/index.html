@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Place Resume - Knowledge system</title>
+	<link rel="stylesheet" href="/final/css/style.css">
+	<link rel="stylesheet" href="/final/css/normalize.css">
+	<link rel="stylesheet" href="/final/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto+Slab|Open+Sans+Condensed:300|Lato|Source+Sans+Pro" rel="stylesheet">
+</head>
+<body class = "blog">
+	
+	<header class="top">
+		<div class="mobile-menu-button"><i class="fa fa-bars" aria-hidden="true"></i></div>
+		<nav class="top-menu">
+			<ul class = "top-menu__desktop">
+				<li class="top-menu__item"><a href="/final/" class="top-menu__link ">Home</a></li>
+				<li class="top-menu__item"><a href="/final/blog/" class="top-menu__link ">Blog</a></li>
+				<li class="top-menu__item"><a href="/final/progr/" class="top-menu__link ">Find a Programmer</a></li>
+				<li class="top-menu__item"><a href="/final/profile/" class="top-menu__link top-menu__link--active">Place Resume</a>
+					<ul class="top-menu__dropdown-menu">
+						<li class="top-menu__dropdown-menu__item"><a href="/final/profile/dashboard/" class="top-menu__link">My Account <i class="fa fa-user-o" aria-hidden="true"></i></a></li>
+					</ul>
+				</li>
+				<li class="top-menu__item"><a href="/final/contacts/" class="top-menu__link">Contacts</a></li>
+			</ul>
+			<div class="top-menu__wrapper">
+				<ul class = "top-menu__mobile">
+					<li class="top-menu__item"><a href="/final/" class="top-menu__link">Home</a></li>
+					<li class="top-menu__item"><a href="/final/blog/" class="top-menu__link">Blog</a></li>
+					<li class="top-menu__item"><a href="/final/progr/" class="top-menu__link">Find a Programmer</a></li>
+					<li class="top-menu__item top-menu__item--has-children"><a href="/final/profile/" class="top-menu__link">Place Resume</a>
+						<ul class="top-menu__dropdown-menu">
+							<li class="top-menu__dropdown-menu__item"><a href="/final/profile/dashboard/" class="top-menu__link">My Account <i class="fa fa-user-o" aria-hidden="true"></i></a></li>
+						</ul>
+					</li>
+					<li class="top-menu__item"><a href="/final/contacts/" class="top-menu__link">Contacts</a></li>
+				</ul>
+			</div>
+			
+		</nav>
+	</header>
+
+	<main class="main">
+		<section class="section login-section">
+			<div class="login-section__window">
+				<div class="login-section__register-message"></div>
+				<h2 class = "login-section__header" id = "login-form">Login</h2>
+				<form action="" class="login-section__login-form" onsubmit="return false">
+					<div class="login-section__login-data login-section__login-data--first">
+						<input type="email" class="login-section__textfield login-section__textfield--first" placeholder="your@email.com" value = "your@email.com" required name = "login-mail" id = "login-mail">
+					</div>
+					<div class="login-section__login-data">
+						<input type="password" class="login-section__textfield" placeholder="Password" value = "Password" required name = "login-password" id = "login-password">
+					</div>
+					<div class="clearfix"></div>
+					<input type="submit" class = "login-section__submit" value="Login" id = "login-account-btn">
+				</form>
+				<h2 class = "login-section__header">Or sign up with</h2>
+				<form class="login-section__register-form" onsubmit="return false">
+					<div class="login-section__login-data login-section__login-data--first">
+						<input type="text" class="login-section__textfield login-section__textfield--first" placeholder="First Name" value = "" required name = "register-name" id = "register-name">
+					</div>
+					<div class="login-section__login-data">
+		            	<input type="text" class="login-section__textfield" placeholder="Last Name" value = "" required name = "register-lastname" id = "register-lastname">
+					</div>
+					<div class="login-section__login-data login-section__login-data--first">
+						<input type="email" class="login-section__textfield" placeholder="your@email.com" value = "" required name = "register-mail" id = "register-mail">
+					</div>
+					<div class="login-section__login-data">
+						<input type="password" class="login-section__textfield" placeholder="Password" value = "" required name = "register-password" id = "register-password">
+					</div>
+					<div class="clearfix"></div>
+					<input type="submit" value="Create account" class = "login-section__submit" id = "create-account-btn">
+					
+				</form>
+			</div>
+		</section>
+	</main>
+
+<script src="/final/js/jquery-3.2.1.min.js"></script>
+<script src = "/final/js/scripts.js"></script>
+<script src = "/final/js/autorize.js"></script>
+</body>
+</html>

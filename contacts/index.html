@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Contacts</title>
+	<link rel="stylesheet" href="/final/css/style.css">
+	<link rel="stylesheet" href="/final/css/normalize.css">
+	<link rel="stylesheet" href="/final/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto+Slab|Open+Sans+Condensed:300|Lato|Source+Sans+Pro" rel="stylesheet">
+</head>
+<body>
+	<header class="top">
+		<div class="mobile-menu-button"><i class="fa fa-bars" aria-hidden="true"></i></div>
+		<nav class="top-menu">
+			<ul class = "top-menu__desktop">
+				<li class="top-menu__item"><a href="/final/" class="top-menu__link ">Home</a></li>
+				<li class="top-menu__item"><a href="/final/blog/" class="top-menu__link ">Blog</a></li>
+				<li class="top-menu__item"><a href="/final/progr/" class="top-menu__link">Find a Programmer</a></li>
+				<li class="top-menu__item"><a href="/final/profile/" class="top-menu__link">Place Resume</a>
+					<ul class="top-menu__dropdown-menu">
+						<li class="top-menu__dropdown-menu__item"><a href="/final/profile/dashboard/" class="top-menu__link">My Account <i class="fa fa-user-o" aria-hidden="true"></i></a></li>
+					</ul>
+				</li>
+				<li class="top-menu__item"><a href="/final/contacts/" class="top-menu__link top-menu__link--active">Contacts</a></li>
+			</ul>
+			<div class="top-menu__wrapper">
+				<ul class = "top-menu__mobile">
+					<li class="top-menu__item"><a href="/final/" class="top-menu__link">Home</a></li>
+					<li class="top-menu__item"><a href="/final/blog/" class="top-menu__link">Blog</a></li>
+					<li class="top-menu__item"><a href="/final/progr/" class="top-menu__link">Find a Programmer</a></li>
+					<li class="top-menu__item top-menu__item--has-children"><a href="/final/profile/" class="top-menu__link">Place Resume</a>
+						<ul class="top-menu__dropdown-menu">
+							<li class="top-menu__dropdown-menu__item"><a href="/final/profile/dashboard/" class="top-menu__link">My Account <i class="fa fa-user-o" aria-hidden="true"></i></a></li>
+						</ul>
+					</li>
+					<li class="top-menu__item"><a href="/final/contacts/" class="top-menu__link">Contacts</a></li>
+				</ul>
+			</div>
+			
+		</nav>
+	</header>
+
+	<main class="main">
+		<section class="section contact-section contact-section contact-map">
+			<div class="container">
+				<div class="section-head">
+					<h2 class = "section-head__title section-head__title--dark">Contact us</h2>
+					<span class = "section-head__subtitle">Please, fill the form below</span>
+				</div>
+				<form action="" class="contact-section__form">
+					<div class="contact-section__author">
+						<input type="text" placeholder="Your Name" required name = "fbName" class="contact-section__input">
+						<input type="email" placeholder="Your Email" required name = "fbMail" class="contact-section__input">
+						<input type="text" placeholder="Subject" name = "fbSubject" class="contact-section__input">
+					</div>
+					<div class="contact-section__text">
+						<textarea name="fbText" id="fbText" class="contact-section__input contact-section__input--area" cols="30" rows="10" placeholder="Your Message" required></textarea>
+					</div>
+					<div class="line-break"></div>
+					<input type="submit" value = "Send" class = "contact-section__submit">
+				</form>
+			</div>
+		</section>
+		<div id="map" class = "contact-section__map"></div>
+	</main>
+
+<script>
+      function initMap() {
+        var uluru = {lat: 40.80234, lng: -73.959794};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 13,
+          center: uluru,
+          styles: [
+			  {
+			    "elementType": "geometry",
+			    "stylers": [
+			      {
+			        "color": "#212121"
+			      }
+			    ]
+			  },
+			  {
+			    "elementType": "labels.icon",
+			    "stylers": [
+			      {
+			        "visibility": "off"
+			      }
+			    ]
+			  },
+			  {
+			    "elementType": "labels.text.fill",
+			    "stylers": [
+			      {
+			        "color": "#757575"
+			      }
+			    ]
+			  },
+			  {
+			    "elementType": "labels.text.stroke",
+			    "stylers": [
+			      {
+			        "color": "#212121"
+			      }
+			    ]
+			  },
+			  {
+			    "featureType": "administrative",
+			    "elementType": "geometry",
+			    "stylers": [
+			      {
+			        "color": "#757575"
+			      }
+			    ]
+			  },
+			  {
+			    "featureType": "administrative.country",
+			    "elementType": "labels.text.fill",
+			    "stylers": [
+			      {
+			        "color": "#9e9e9e"
+			      }
+			    ]
+			  },
+			  {
+			    "featureType": "administrative.land_parcel",
+			    "elementType": "labels",
+			    "stylers": [
+			      {
+			        "visibility": "off"
+			      }
+			    ]
+			  },
+			  {
+			    "featureType": "administrative.locality",
+			    "elementType": "labels.text.fill",
+			    "stylers": [
+			      {
+			        "color": "#bdbdbd"
+			      }
+			    ]
+			  },
+			  {
+			    "featureType": "poi",
+			    "elementType": "labels.text",
+			    "stylers": [
+			      {
+			        "visibility": "off"
+			      }
+			    ]
+			  },
+			  {
+			    "featureType": "poi",
+			    "elementType": "labels.text.fill",
+			    "stylers": [
+			      {
+			        "color": "#757575"
+			      }
+			    ]
+			  },
+			  {
+			    "featureType": "poi.park",
+			    "elementType": "geometry",
+			    "stylers": [
+			      {
+			        "color": "#181818"
+			      }
+			    ]
+			  },
+			  {
+			    "featureType": "poi.park",
+			    "elementType": "labels.text.fill",
+			    "stylers": [
+			      {
+			        "color": "#616161"
+			      }
+			    ]
+			  },
+			  {
+			    "featureType": "poi.park",
+			    "elementType": "labels.text.stroke",
+			    "stylers": [
+			      {
+			        "color": "#1b1b1b"
+			      }
+			    ]
+			  },
+			  {
+			    "featureType": "road",
+			    "elementType": "geometry.fill",
+			    "stylers": [
+			      {
+			        "color": "#2c2c2c"
+			      }
+			    ]
+			  },
+			  {
+			    "featureType": "road",
+			    "elementType": "labels.text.fill",
+			    "stylers": [
+			      {
+			        "color": "#8a8a8a"
+			      }
+			    ]
+			  },
+			  {
+			    "featureType": "road.arterial",
+			    "elementType": "geometry",
+			    "stylers": [
+			      {
+			        "color": "#373737"
+			      }
+			    ]
+			  },
+			  {
+			    "featureType": "road.highway",
+			    "elementType": "geometry",
+			    "stylers": [
+			      {
+			        "color": "#3c3c3c"
+			      }
+			    ]
+			  },
+			  {
+			    "featureType": "road.highway.controlled_access",
+			    "elementType": "geometry",
+			    "stylers": [
+			      {
+			        "color": "#4e4e4e"
+			      }
+			    ]
+			  },
+			  {
+			    "featureType": "road.local",
+			    "elementType": "labels",
+			    "stylers": [
+			      {
+			        "visibility": "off"
+			      }
+			    ]
+			  },
+			  {
+			    "featureType": "road.local",
+			    "elementType": "labels.text.fill",
+			    "stylers": [
+			      {
+			        "color": "#616161"
+			      }
+			    ]
+			  },
+			  {
+			    "featureType": "transit",
+			    "elementType": "labels.text.fill",
+			    "stylers": [
+			      {
+			        "color": "#757575"
+			      }
+			    ]
+			  },
+			  {
+			    "featureType": "water",
+			    "elementType": "geometry",
+			    "stylers": [
+			      {
+			        "color": "#000000"
+			      }
+			    ]
+			  },
+			  {
+			    "featureType": "water",
+			    "elementType": "labels.text.fill",
+			    "stylers": [
+			      {
+			        "color": "#3d3d3d"
+			      }
+			    ]
+			  }
+			]
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAA7Wy56DesaV_LLjJds_AoWxpVjZTlb2s&callback=initMap">
+    </script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My Account - Knowledge system</title>
+	<link rel="stylesheet" href="/final/css/style.css">
+	<link rel="stylesheet" href="/final/css/normalize.css">
+	<link rel="stylesheet" href="/final/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto+Slab|Open+Sans+Condensed:300|Lato|Source+Sans+Pro" rel="stylesheet">
+</head>
+<body>
+	
+	<header class="top">
+		<div class="mobile-menu-button"><i class="fa fa-bars" aria-hidden="true"></i></div>
+		<nav class="top-menu">
+			<ul class = "top-menu__desktop">
+				<li class="top-menu__item"><a href="/final/" class="top-menu__link ">Home</a></li>
+				<li class="top-menu__item"><a href="/final/blog/" class="top-menu__link ">Blog</a></li>
+				<li class="top-menu__item"><a href="/final/progr/" class="top-menu__link ">Find a Programmer</a></li>
+				<li class="top-menu__item"><a href="/final/profile/" class="top-menu__link top-menu__link--active">Place Resume</a>
+					<ul class="top-menu__dropdown-menu">
+						<li class="top-menu__dropdown-menu__item"><a href="/final/profile/dashboard/" class="top-menu__link">My Account <i class="fa fa-user-o" aria-hidden="true"></i></a></li>
+					</ul>
+				</li>
+				<li class="top-menu__item"><a href="/final/contacts/" class="top-menu__link">Contacts</a></li>
+			</ul>
+			<div class="top-menu__wrapper">
+				<ul class = "top-menu__mobile">
+					<li class="top-menu__item"><a href="/final/" class="top-menu__link">Home</a></li>
+					<li class="top-menu__item"><a href="/final/blog/" class="top-menu__link">Blog</a></li>
+					<li class="top-menu__item"><a href="/final/progr/" class="top-menu__link">Find a Programmer</a></li>
+					<li class="top-menu__item top-menu__item--has-children"><a href="/final/profile/" class="top-menu__link">Place Resume</a>
+						<ul class="top-menu__dropdown-menu">
+							<li class="top-menu__dropdown-menu__item"><a href="/final/profile/dashboard/" class="top-menu__link">My Account <i class="fa fa-user-o" aria-hidden="true"></i></a></li>
+						</ul>
+					</li>
+					<li class="top-menu__item"><a href="/final/contacts/" class="top-menu__link">Contacts</a></li>
+				</ul>
+			</div>
+			
+		</nav>
+	</header>
+
+	<main class="main">
+
+		<section class="section dashboard-section">
+			<div class="container">
+				<div class="dashboard-section__data">
+					<fieldset class="dashboard-section__group">
+						<legend class="dashboard-section__label">Name</legend>
+						<input disabled="disabled" class="dashboard-section__input" value = "" id = "user-fullname">
+		            </fieldset>
+		            <fieldset class="dashboard-section__group">
+						<legend class="dashboard-section__label">Email</legend>
+						<input class="dashboard-section__input" value = "" id = "user-email">
+		            </fieldset>
+		            <fieldset class="dashboard-section__group">
+						<legend class="dashboard-section__label">Address</legend>
+						<label for="dashboard-street" class="dashboard-section__label dashboard-section__label--small">Street</label>
+						<input class="dashboard-section__input" value = "" name = "dashboard-street" id = "dashboard-street">
+						<div class="dashboard-section__area">
+							<div class="dashboard-section__area__part">
+								<label for="dashboard-city" class="dashboard-section__label dashboard-section__label--small">City</label>
+								<input class="dashboard-section__input dashboard-section__input--half" value = "" name = "dashboard-city" id = "dashboard-city">
+							</div>
+							<div class="dashboard-section__area__part">
+								<label for="dashboard-country" class="dashboard-section__label dashboard-section__label--small">Country</label>
+								<input class="dashboard-section__input dashboard-section__input--half" value = "" name = "dashboard-country" id = "dashboard-country">
+							</div>
+						</div>
+		            </fieldset>
+		            <fieldset class="dashboard-section__group">
+		            	<legend class="dashboard-section__label">About Me</legend>
+		            	<textarea class = "dashboard-section__input" name="dashboard-information" cols="30" rows="10" id = "user-information"></textarea>
+		            </fieldset>
+				</div>
+				<div class="dashboard-section__data">
+					<fieldset class="dashboard-section__group">
+						<legend class="dashboard-section__label">Job</legend>
+						<input class="dashboard-section__input" value = "" id = "user-job">
+		            </fieldset>
+		            <fieldset class="dashboard-section__group">
+						<legend class="dashboard-section__label">My skills</legend>
+						<div class="programmer-skills" id = "user-skills">
+
+						</div>
+						<h2 class="dashboard-section__label dashboard-section__subheading">
+							Add Skills
+						</h2>
+						<form class="dashboard-section__area" action = "" name = "add-skill" onsubmit="return false">
+							<div class="dashboard-section__area__part">
+								<label for="user-skill-header" class="dashboard-section__label dashboard-section__label--small">Skill</label>
+								<input class="dashboard-section__input dashboard-section__input--half" value = "" name = "dashboard-skill" required id = "user-skill-header">
+							</div>
+							<div class="dashboard-section__area__part">
+								<label for="user-skill-points" class="dashboard-section__label dashboard-section__label--small">Points (1-5) </label>
+								<input type = "number" min = "1" max = "5" class="dashboard-section__input dashboard-section__input--half" value = "" name = "dashboard-points" required id = "user-skill-points">
+							</div>
+							<div class="dashboard-section__area__part dashboard-section__area__part--all-height">
+								<button class="dashboard-section__add-skill" type = "submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
+							</div>
+						</form>
+		            </fieldset>
+					<fieldset class="dashboard-section__group">
+		           		<a href="" class="login-section__submit dashboard-section__save-profile">Save profile </a>
+		           		<a href="" class="dashboard-section__log-out">Log Out<i class="fa fa-sign-out" aria-hidden="true"></i></a>
+		           		<div class="dashboard-section__save-message"></div>
+		           	</fieldset>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+
+<script src="/final/js/jquery-3.2.1.min.js"></script>
+<script src = "/final/js/scripts.js"></script>
+<script src = "/final/js/my-cabinet.js"></script>
+</body>

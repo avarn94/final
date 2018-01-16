@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Knowledge system</title>
+	<link rel="stylesheet" href="/final/css/style.css">
+	<link rel="stylesheet" href="/final/css/normalize.css">
+	<link rel="stylesheet" href="/final/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto+Slab|Open+Sans+Condensed:300|Lato|Source+Sans+Pro" rel="stylesheet">
+</head>
+<body>
+	<header class="top">
+		<div class="mobile-menu-button"><i class="fa fa-bars" aria-hidden="true"></i></div>
+		<nav class="top-menu">
+			<ul class = "top-menu__desktop">
+				<li class="top-menu__item"><a href="/final/" class="top-menu__link ">Home</a></li>
+				<li class="top-menu__item"><a href="/final/blog/" class="top-menu__link ">Blog</a></li>
+				<li class="top-menu__item"><a href="/final/progr/" class="top-menu__link top-menu__link--active">Find a Programmer</a></li>
+				<li class="top-menu__item"><a href="/final/profile/" class="top-menu__link">Place Resume</a>
+					<ul class="top-menu__dropdown-menu">
+						<li class="top-menu__dropdown-menu__item"><a href="/final/profile/dashboard/" class="top-menu__link">My Account <i class="fa fa-user-o" aria-hidden="true"></i></a></li>
+					</ul>
+				</li>
+				<li class="top-menu__item"><a href="/final/contacts/" class="top-menu__link">Contacts</a></li>
+			</ul>
+			<div class="top-menu__wrapper">
+				<ul class = "top-menu__mobile">
+					<li class="top-menu__item"><a href="/final/" class="top-menu__link">Home</a></li>
+					<li class="top-menu__item"><a href="/final/blog/" class="top-menu__link">Blog</a></li>
+					<li class="top-menu__item"><a href="/final/progr/" class="top-menu__link">Find a Programmer</a></li>
+					<li class="top-menu__item top-menu__item--has-children"><a href="/final/profile/" class="top-menu__link">Place Resume</a>
+						<ul class="top-menu__dropdown-menu">
+							<li class="top-menu__dropdown-menu__item"><a href="/final/profile/dashboard/" class="top-menu__link">My Account <i class="fa fa-user-o" aria-hidden="true"></i></a></li>
+						</ul>
+					</li>
+					<li class="top-menu__item"><a href="/final/contacts/" class="top-menu__link">Contacts</a></li>
+				</ul>
+			</div>
+			
+		</nav>
+	</header>
+
+	<main class="main">
+		<section class="section cards">
+			<div class="container cards__filter">
+					<span class = "cards__filter__message"></span>
+					<input class="cards__filter__element" value = "" name = "filter-skill" id = "filter-skill" placeholder="Enter skill">
+					<input type = "number" min = "0" max = "4" class="cards__filter__element" value = "" name = "filter-points" id = "filter-points" placeholder="Points">
+					<button class="cards__filter__element cards__filter__element--button" value = "" id = "filter-button" placeholder="Enter skill">Filter <i class="fa fa-filter" aria-hidden="true"></i></button>
+			</div>
+			<div class="container cards__container">
+			</div>
+		</section>
+	</main>
+	
+	
+
+
+<script src="/final/js/jquery-3.2.1.min.js"></script>
+<script src = "/final/js/scripts.js"></script>
+<script src = "/final/js/manager-scripts.js"></script>
+
+</body>
+</html>
