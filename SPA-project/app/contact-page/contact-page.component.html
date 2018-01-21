@@ -1,0 +1,7 @@
+<app-menu></app-menu>
+<main class="main">
+	<app-contacts></app-contacts>
+	<agm-map [latitude]="lat" [longitude]="lng" [styles]="styles" [zoom]="zoom">
+		<agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+	</agm-map>
+</main>

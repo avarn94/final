@@ -1,0 +1,43 @@
+<app-menu></app-menu>
+<main class="main">
+		<section class="section login-section">
+			<div class="login-section__window">
+				<div class="login-section__register-message"></div>
+				<h2 class = "login-section__header" id = "login-form">Login</h2>
+				<form action="" class="login-section__login-form" onsubmit="return false">
+					<div class="login-section__login-data login-section__login-data--first">
+						<input type="email" class="login-section__textfield login-section__textfield--first" placeholder="your@email.com"  required name = "login-mail" id = "login-mail" [(ngModel)] = "loginName" (click)="clearLogin()">
+					</div>
+					<div class="login-section__login-data">
+						<input type="password" class="login-section__textfield" placeholder="Password" required name = "login-password" id = "login-password" [(ngModel)] = "password" (click)="clearPassword()">
+					</div>
+					<div class="clearfix"></div>
+					<input type="submit" class = "login-section__submit" value="Login" id = "login-account-btn" 
+					(click)="login()">
+				</form>
+				<h2 class = "login-section__header">Or sign up with</h2>
+				<form #register = "ngForm" class="login-section__register-form" onsubmit="return false">
+					<div class="login-section__login-data login-section__login-data--first">
+						<input type="text" class="login-section__textfield login-section__textfield--first" placeholder="First Name" required name = "register-name" id = "register-name" [(ngModel)] = "newFirstName"><span class="login-section__warning">Fill me</span>
+					</div>
+					<div class="login-section__login-data">
+		            	<input type="text" class="login-section__textfield" placeholder="Last Name" required name = "register-lastname" id = "register-lastname" [(ngModel)] = "newLastName">
+		            	<span class="login-section__warning">Fill me</span>
+					</div>
+					<div class="login-section__login-data login-section__login-data--first">
+						<input type="email" class="login-section__textfield" placeholder="your@email.com" required name = "register-mail" id = "register-mail" [(ngModel)] = "newEmail" email>
+						<span class="login-section__warning">Fill me</span>
+					</div>
+					<div class="login-section__login-data">
+						<input type="password" class="login-section__textfield" placeholder="Password" required name = "register-password" id = "register-password" [(ngModel)] = "newPassword" minlength="6">
+						<span class="login-section__warning">Fill me</span>
+					</div>
+					<div class="clearfix"></div>
+					<input [disabled]="!register.valid" type="submit" value="Create account" class = "login-section__submit" id = "create-account-btn" (click) = "registerUser()">
+
+					
+				</form>
+			</div>
+		</section>
+	</main>
+

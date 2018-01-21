@@ -1,0 +1,133 @@
+.section-blog {
+  margin: 76px auto 0 auto;
+}
+
+.blog__title {
+  position: relative;
+  padding: 50px;
+  background-color: #f5f5f5;
+  margin-top: 76px;
+}
+
+.blog__title-text {
+  margin-bottom: 0;
+  margin-top: 0;
+  letter-spacing: 2px;
+  font-weight: normal;
+  font-size: 28px;
+  font-family: 'Lato';
+  color: #333;
+}
+
+.section-blog__posts {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section-blog__post {
+  width: 39%;
+  padding: 5%;
+}
+
+.section-blog__post a {
+  text-decoration: none;
+  color: #7e7e7e;
+}
+
+.section-blog__post a:hover {
+  color: #6ec2cc;
+}
+
+.section-blog__post__title {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  padding-top: 20px;
+  color: #222;
+}
+
+.section-blog__post__title:hover {
+  color: #6ec2cc;
+}
+
+
+.section-blog__post__paragraph {
+  margin: 10px 0 0 0;
+  color: #7e7e7e;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Source Sans Pro", sans-serif;
+  line-height: 30px;
+}
+
+.section-blog__post__link {
+  color: #222;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 17px;
+  font-weight: 400;
+  font-family: "Source Sans Pro", sans-serif;
+  line-height: 30px;
+}
+
+.section-blog__post__link:hover {
+  color: #6ec2cc;
+}
+
+.section-blog .fa-arrow-right {
+  margin-left: 5px;
+  font-size: 0.7em;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.section-blog__post__image {
+  width: 530px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+
+.blog-navigation {
+  display: flex;
+  justify-content: center;
+}
+
+.blog-navigation__link {
+  background: #7e7e7e;
+  color: #fff;
+  padding: 7px 14px;
+  margin: 5px;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+}
+
+.blog-navigation__link--active,
+.blog-navigation__link:hover {
+  background-color: #6ec2cc;
+}
+
+@media all and (max-width: 991px) {
+  .section-blog__post__title {
+    font-size: 1.3em;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .section-blog {
+    margin:  0;
+  }
+  .section-blog__post__image {
+    max-width: 100%;
+    height: auto;
+  }
+  .section-blog__post {
+    width: 100%;
+  }
+}

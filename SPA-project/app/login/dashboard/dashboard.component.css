@@ -1,0 +1,156 @@
+.dashboard-section__save-message {
+  padding-top:  10px;
+  color: #07793D;
+}
+
+.dashboard-section__save-message {
+  display: none;
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  text-align: center;
+}
+
+.dashboard-section__data {
+  width: 50%;
+  float: left;
+}
+
+.dashboard-section__group {
+  border:  0;
+  margin: 0.75rem;
+}
+
+.dashboard-section__label {
+  line-height: 1.25;
+  color: #54698d;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
+}
+
+.dashboard-section__label--small {
+  font-size: 0.8em;
+}
+
+.dashboard-section__input {
+  background-color: white;
+  color: #16325c;
+  border: 1px solid #d8dde6;
+  border-radius: 0.25rem;
+  width: 100%;
+  transition: border 0.1s linear, background-color 0.1s linear;
+  display: inline-block;
+  line-height: 1.875rem;
+  min-height: calc(1.875rem + (1px * 2));
+  margin: 10px 0;
+}
+
+.dashboard-section__input[disabled] {
+  background-color: #e0e5ee;
+  border-color: #a8b7c7;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.dashboard-section__area {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboard-section__input--half {
+  padding: 0;
+}
+
+.dashboard-section__subheading {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.dashboard-section__area__part {
+  font-size: 1em;
+}
+
+.dashboard-section__area__part--all-height {
+  line-height: 88px;
+  font-size: 1.5em;
+}
+
+.login-section__submit {
+  padding: 17px 30px;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  background: #40A46F;
+  border: 1px solid #40A46F;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  outline: none;
+  width: 100%;
+  -webkit-appearance: none;
+}
+
+.login-section__submit:hover {
+  background: #07793D;
+  border: 1px solid #07793D;
+}
+
+.dashboard-section__add-skill, 
+.dashboard-section__add-skill:active, 
+.dashboard-section__add-skill:focus {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #16325c;
+  cursor: pointer;
+}
+
+.dashboard-section__save-profile {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  width: auto;
+}
+
+.dashboard-section__log-out {
+  background: #444444;
+  padding: 16px 26px;
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  float: right;
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dashboard-section__log-out .fa {
+  padding-left: 20px;
+}
+
+@media all and (max-width: 767px) {
+  .dashboard-section__data {
+    width: 100%;
+    float:  none;
+  }
+}
+
+@media all and (max-width: 559px) {
+  .dashboard-section__area { 
+    flex-direction: column;
+  }
+  .dashboard-section__area__part--all-height {
+    line-height: normal;
+    text-align: right;
+  }
+  .dashboard-section__add-skill:after {
+    content: 'Add skills';
+    padding-left: 10px;
+  }
+}

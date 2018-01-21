@@ -1,0 +1,145 @@
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0px;
+  left: 0px;
+}
+
+.slider__list {
+  height: 100%;  
+  position: relative;
+  margin: 0;
+  padding: 0;
+  -webkit-transform: translate3d(0px,0px,0px);
+  transform: translate3d(0px,0px,0px);
+  transition: all 0.66s ease; -webkit-transition: all 0.66s ease; 
+}
+
+.slider__item {
+  list-style: none;
+  position: relative;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 500px;
+  height: 100%;
+  background: #ccc;
+  text-align: center;
+  line-height: 300px; 
+  background-size: cover; 
+  background-position: 50% 50%;
+  color: #fff;
+  -webkit-transform: translate3d(0px,0px,0px);
+  visibility: visible;
+  -webkit-transform-style: preserve-3d;
+}
+
+.slider__nav { 
+  position: absolute; 
+  z-index: 9; 
+  top: 50%; 
+  cursor: pointer; 
+  color: #fff; 
+  opacity: 0.7; 
+  transition: all 0.66s ease; 
+  -webkit-transition: all 0.66s ease; 
+}
+
+.slider__nav:hover { 
+  opacity: 1; 
+}
+
+.slider__nav--left { 
+  left: 3%; 
+}
+
+.slider__nav--right { 
+  right: 3%; 
+}
+
+.slider__info {
+  margin: auto;
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  bottom: 0; 
+  right: 0;
+  font-family: "Montserrat";
+  height: 50%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.slider__title {
+  font-size: 65px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.slider__search {
+  margin-top: 40px;
+}
+
+.slider__search-text {
+  display: inline-block;
+  position: relative;
+}
+
+.slider__search-text .fa {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  text-align: center;
+  line-height: 40px;
+  color: #6ec2cc;
+}
+
+.slider__search-text input {
+  padding-left: 40px;
+  height: 40px;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 20px 0 0 20px;
+  background: transparent;
+}
+
+.slider__search-text input:focus {
+    outline: 0;
+    box-shadow: 0 0 1px 1px rgb(77, 144, 254);
+}
+
+.slider__search-text:nth-child(2) input {
+  border-radius: 0;
+  position: relative;
+  left: -5px;
+}
+
+.slider__search-button {
+  line-height: 42px;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 0 20px;
+  position: relative;
+  left: -10px;
+}
+
+@media all and (max-width: 1199px) {
+  .slider__info {
+    width: 100%;
+  }
+  .slider__title {
+    font-size: 45px;
+  }
+}
+
+@media all and (max-width: 559px) {
+  .slider__title {
+    font-size: 25px;
+  }
+}

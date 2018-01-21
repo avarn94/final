@@ -1,0 +1,119 @@
+.cards {
+  padding-bottom: 100px;
+}
+
+.cards__resume {
+  width: 400px;
+  margin: 20px auto;
+  text-align: center;
+  padding: 30px;
+  -webkit-box-shadow: 6px 6px 33px 6px rgba(110,194,204,1);
+  -moz-box-shadow: 6px 6px 33px 6px rgba(110,194,204,1);
+  box-shadow: 6px 6px 33px 6px rgba(110,194,204,1);
+}
+
+.cards__resume__name {
+  font-family: 'Roboto thin';
+  border: 2px solid #40A46F;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.cards__resume__field {
+  text-align: left;
+  display: flex;
+  font-family: "Roboto";
+  margin: 10px 4px;
+  justify-content: space-between;
+}
+.cards__resume__skill-field {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cards__filter {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.cards__filter__element {
+  background-color: white;
+  color: #16325c;
+  border: 1px solid #d8dde6;
+  border-radius: 0.25rem;
+  padding: 8px 16px;
+  margin-left: 20px;
+}
+
+.cards__filter__element--button {
+  cursor: pointer;
+  background: #5c9197;
+  color: #fff;
+}
+
+.cards__filter__message {
+  display: none;
+  color: #a3a7ad;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8em;
+  padding: 8px 0;
+}
+.table-view {
+  border: 1px solid #f2f2f2;
+}
+.table-view__resume-container {
+    overflow-x: auto;
+    background: #f2f2f2;
+}
+.table-view__resume-container:nth-child(2n) {
+  background: #ffffff;
+}
+.table-view__resume {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0;
+}
+
+.table-view__resume-cell {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 100%;
+  padding: 0.8em 1.2em;
+  overflow: hidden;
+  list-style: none;
+  border-right: solid 1px white;
+  width: 25%;
+  font-family: "Roboto", sans-serif;
+}
+
+@media all and (max-width: 991px) {
+  .table-view__resume {
+    width: 800px;
+  }
+}
+@media all and (max-width: 767px) {
+  .cards__filter {
+    padding-bottom: 20px;
+  }
+}
+
+@media all and (max-width: 559px) {
+  .cards__resume {
+    width: auto;
+  }
+  .cards__filter {
+    flex-direction: column;
+  }
+  .cards__filter__message,
+  .cards__filter__element {
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,29 @@
+<header class="top" [ngClass]="{'menu-opened': isOpened}">
+	<div class="mobile-menu-button" (click) = "toggleMenu()"><i class="fa fa-bars" aria-hidden="true"></i></div>
+	<nav class="top-menu">
+		<ul class = "top-menu__desktop">
+			<li class="top-menu__item"><a href="#" class="top-menu__link" routerLink="/">Home</a></li>
+			<li class="top-menu__item"><a href="#" class="top-menu__link" routerLink="/blog/">Blog</a></li>
+			<li class="top-menu__item"><a href="#" class="top-menu__link" routerLink="/search/">Find a Programmer</a></li>
+			<li class="top-menu__item"><a href="#" class="top-menu__link" routerLink="/login/">Place Resume</a>
+				<ul class="top-menu__dropdown-menu">
+					<li class="top-menu__dropdown-menu__item"><a href="#" class="top-menu__link" routerLink="/dashboard/">My Account <i class="fa fa-user-o" aria-hidden="true"></i></a></li>
+				</ul>
+			</li>
+			<li class="top-menu__item"><a href="#" class="top-menu__link" routerLink="/contacts/">Contacts</a></li>
+		</ul>
+		<div class="top-menu__wrapper">
+			<ul class = "top-menu__mobile">
+				<li class="top-menu__item"><a href="#" class="top-menu__link" routerLink="/">Home</a></li>
+				<li class="top-menu__item"><a href="#" class="top-menu__link" routerLink="/blog/">Blog</a></li>
+				<li class="top-menu__item"><a href="#" class="top-menu__link" routerLink="/search/">Find a Programmer</a></li>
+				<li class="top-menu__item top-menu__item--has-children"><a href="#" class="top-menu__link" routerLink="/login/">Place Resume</a>
+					<ul class="top-menu__dropdown-menu">
+						<li class="top-menu__dropdown-menu__item"><a href="#" class="top-menu__link" routerLink="/dashboard/">My Account <i class="fa fa-user-o" aria-hidden="true"></i></a></li>
+						</ul>
+				</li>
+				<li class="top-menu__item"><a href="#" class="top-menu__link" routerLink="/contacts/">Contacts</a></li>
+			</ul>
+		</div>	
+	</nav>
+</header>

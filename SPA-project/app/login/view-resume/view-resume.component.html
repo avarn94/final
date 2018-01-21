@@ -1,0 +1,50 @@
+<app-menu></app-menu>	
+<main class="main"  *ngIf="isDataAvailable">
+	<section class="section cards">
+		<div class="container cards__filter">
+			<span class = "cards__filter__message"></span>
+			<input class="cards__filter__element" [(ngModel)]="skillName" (keyup)="skillFilling()" name = "filter-skill" id = "filter-skill" placeholder="Enter skill">
+			<select class = "cards__filter__element" (change) = "sortResumes()" [(ngModel)]="selectedValue">
+				<option value="1">By Name</option>
+				<option value="2">By Jobs</option>
+			</select>
+			<button class = "cards__filter__element" (click) = "listView()"><i class="fa fa-th-list" aria-hidden="true"></i></button>
+			<button class = "cards__filter__element" (click) = "tableView()"><i class="fa fa-th-large" aria-hidden="true"></i></button>
+		</div>
+		<div class="container cards__container" *ngIf = "!viewType">
+			<div class="cards__resume" *ngFor = "let resume of resumesCopy | paginate: { itemsPerPage: 10, currentPage: p }">
+				<h2 class="cards__resume__name">{{resume.name}}</h2>
+				<div class="cards__resume__field" >
+					<span>E-mail: </span>
+					<span>{{resume.mail}}</span>
+				</div>
+				<div class="cards__resume__field">
+					<span>Job pretends: </span>
+					<span>{{resume.job}}</span>
+				</div>
+				<div class="cards__resume__skill-field">
+					<div class = "programmer-skill" *ngFor = "let skills of resume.skills">
+						<span class="programmer-skill__header">{{skills.skill}}</span>
+						<span class="programmer-skill__points">{{skills.points}}</span>
+					</div>
+				</div>
+			</div>
+			<pagination-controls (pageChange)="p = $event"></pagination-controls>
+		</div>
+		<div class="container table-view" *ngIf = "viewType">
+			<div class="table-view__resume-container" *ngFor = "let resume of resumesCopy | paginate: { itemsPerPage: 10, currentPage: p }" >
+				<div class="table-view__resume">
+					<div class="table-view__resume-cell">{{resume.name}}</div>
+					<div class="table-view__resume-cell">{{resume.mail}}</div>
+					<div class="table-view__resume-cell">{{resume.job}}</div>
+					<div class="table-view__resume-cell">
+						<div class="table-view__skill-container" *ngFor = "let skills of resume.skills">
+							{{skills.skill}}
+						</div>
+					</div>
+				</div>
+			</div>
+			<pagination-controls (pageChange)="p = $event"></pagination-controls>
+		</div>
+	</section>
+</main>

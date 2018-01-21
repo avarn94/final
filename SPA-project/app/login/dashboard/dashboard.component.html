@@ -1,0 +1,75 @@
+<app-menu></app-menu>
+<main class="main">
+
+		<section class="section dashboard-section" *ngIf="isDataAvailable">
+			<div class="container">
+				<div class="dashboard-section__data">
+					<fieldset class="dashboard-section__group">
+						<legend class="dashboard-section__label" (click) = 'getContent()'>Name</legend>
+						<input disabled="disabled" class="dashboard-section__input" [(ngModel)] = "name" id = "user-fullname">
+		            </fieldset>
+		            <fieldset class="dashboard-section__group">
+						<legend class="dashboard-section__label">Email</legend>
+						<input class="dashboard-section__input" [(ngModel)] = "mail" id = "user-email">
+		            </fieldset>
+		            <fieldset class="dashboard-section__group">
+						<legend class="dashboard-section__label">Address</legend>
+						<label for="dashboard-street" class="dashboard-section__label dashboard-section__label--small">Street</label>
+						<input class="dashboard-section__input" [(ngModel)] = "street" name = "dashboard-street" id = "dashboard-street">
+						<div class="dashboard-section__area">
+							<div class="dashboard-section__area__part">
+								<label for="dashboard-city" class="dashboard-section__label dashboard-section__label--small">City</label>
+								<input class="dashboard-section__input dashboard-section__input--half" [(ngModel)] = "city" name = "dashboard-city" id = "dashboard-city">
+							</div>
+							<div class="dashboard-section__area__part">
+								<label for="dashboard-country" class="dashboard-section__label dashboard-section__label--small">Country</label>
+								<input class="dashboard-section__input dashboard-section__input--half" [(ngModel)] = "country" name = "dashboard-country" id = "dashboard-country">
+							</div>
+						</div>
+		            </fieldset>
+		            <fieldset class="dashboard-section__group">
+		            	<legend class="dashboard-section__label">About Me</legend>
+		            	<textarea class = "dashboard-section__input" name="dashboard-information" cols="30" rows="10" id = "user-information" [(ngModel)] = "information"></textarea>
+		            </fieldset>
+				</div>
+				<div class="dashboard-section__data">
+					<fieldset class="dashboard-section__group">
+						<legend class="dashboard-section__label">Job</legend>
+						<input class="dashboard-section__input" [(ngModel)] = "job" id = "user-job">
+		            </fieldset>
+		            <fieldset class="dashboard-section__group">
+						<legend class="dashboard-section__label">My skills</legend>
+						<div class="programmer-skills" id = "user-skills">
+							<div class="programmer-skill" *ngFor="let skill of skills">
+								<span class="programmer-skill__delete" (click)="deleteSkill(skill)"></span>	
+								<span class="programmer-skill__header">{{skill.skill}}</span>
+								<span class="programmer-skill__points">{{skill.points}}</span>
+							</div>
+						</div>
+						<h2 class="dashboard-section__label dashboard-section__subheading">
+							Add Skills
+						</h2>
+						<form class="dashboard-section__area" action = "" name = "add-skill" onsubmit="return false">
+							<div class="dashboard-section__area__part">
+								<label for="user-skill-header" class="dashboard-section__label dashboard-section__label--small">Skill</label>
+								<input class="dashboard-section__input dashboard-section__input--half" [(ngModel)] = "newSkill" name = "dashboard-skill" required id = "user-skill-header">
+							</div>
+							<div class="dashboard-section__area__part">
+								<label for="user-skill-points" class="dashboard-section__label dashboard-section__label--small">Points (1-5) </label>
+								<input type = "number" min = "1" max = "5" class="dashboard-section__input dashboard-section__input--half" value = "" name = "dashboard-points" required id = "user-skill-points" [(ngModel)] = "newPoint">
+							</div>
+							<div class="dashboard-section__area__part dashboard-section__area__part--all-height">
+								<button class="dashboard-section__add-skill" type = "submit" (click) = "addSkill()"><i class="fa fa-plus" aria-hidden="true"></i></button>
+							</div>
+						</form>
+		            </fieldset>
+					<fieldset class="dashboard-section__group">
+		           		<div class="login-section__submit dashboard-section__save-profile" (click) = "saveProfile()">Save profile </div>
+		           		<div href="" class="dashboard-section__log-out" (click) = "logOut()">Log Out<i class="fa fa-sign-out" aria-hidden="true"></i></div>
+		           		<div class="dashboard-section__save-message"></div>
+		           	</fieldset>
+				</div>
+			</div>
+		</section>
+
+	</main>

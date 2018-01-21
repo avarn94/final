@@ -1,0 +1,164 @@
+html, 
+body {
+  width: 100%;
+  overflow: hidden;
+}
+ 
+main {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.clearfix::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.section-head {
+  text-align: center;
+}
+
+.section-head__title {
+  padding-bottom: 40px;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Montserrat";
+  color: rgb(34, 34, 34);
+  text-transform: uppercase;
+}
+
+.section-head__title--light {
+  color: rgb(49, 49, 49);
+}
+
+.section-head__title--dark {
+  color: #fefefe;
+}
+
+.section-head__title:before,
+.section-head__title:after {
+  content: "";
+  display: inline-block;
+  height: 4px;
+  width: 110px;
+  vertical-align: middle;
+  margin: 0 10px;
+}
+
+.section-head__title--light:before,
+.section-head__title--light:after {
+    background: rgb(49, 49, 49);
+}
+
+.section-head__title--dark:before,
+.section-head__title--dark:after {
+    background: #fefefe;
+}
+
+.section-head__subtitle {
+  font-size: 16px;
+  font-family: sans-serif;
+  color: rgb(119, 119, 119);
+  font-style: italic;
+}
+
+.programmer-skills {
+  display: flex;
+  flex-wrap: wrap;
+}
+.programmer-skill {
+  display: flex;
+  background: #fff;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  margin: 5px;
+}
+
+.programmer-skill__delete {
+  color: #eee;
+  cursor: pointer;
+}
+
+.programmer-skill__delete:before {
+    content: "\f00d";
+    font-family: FontAwesome;
+    padding: 2px 4px;
+}
+
+.programmer-skill__header {
+  padding: 5px 10px;
+}
+
+.programmer-skill__points {
+  padding: 5px 10px;
+  background: rgba(65,65,65,0.25);
+}
+ 
+.ngx-pagination {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+
+.container .ngx-pagination .pagination-next a::after, 
+.container .ngx-pagination .pagination-next.disabled::after {
+    content: "\F105";
+    font-family: "FontAwesome";
+    margin-left: 0.3rem;
+}
+.container .ngx-pagination .pagination-previous a::before, 
+.container .ngx-pagination .pagination-previous.disabled::before {
+    content: '\F104';
+    font-family: "FontAwesome";
+    margin-left: 0.3rem;
+}
+@media all and (max-width: 1199px) {
+  .container {
+    width: 970px;
+  }
+}
+@media all and (max-width: 991px) {
+  .container {
+    width: 750px;
+  }
+}
+@media all and (max-width: 767px) {
+  .container {
+    width: auto;
+    padding: 0 2%;
+  }
+  .section-head__title {
+    font-size: 30px;
+  }
+  .section-head__title:before, 
+  .section-head__title:after {
+    display: none;
+  }
+  .section {
+    padding:  70px 0;
+  }
+}
